@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("users");
 
-  // Mock Data
   const [users, setUsers] = useState([
     { id: 1, name: "John Doe", email: "john@example.com", status: "Active" },
     { id: 2, name: "Jane Smith", email: "jane@example.com", status: "Inactive" },
@@ -14,10 +13,8 @@ const Dashboard = () => {
     { id: 2, name: "User", permissions: ["Read"] },
   ]);
 
-  // Handlers
   const deleteUser = (id) => setUsers(users.filter((user) => user.id !== id));
 
-  // Render Tabs
   const renderTab = () => {
     switch (activeTab) {
       case "users":
